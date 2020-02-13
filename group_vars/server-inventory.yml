@@ -1,0 +1,3 @@
+# here we have all the servers where we need to deploy the tomcat
+
+server: qatutil103.unix.gsm1900.org
