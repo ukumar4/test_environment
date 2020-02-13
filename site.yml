@@ -1,7 +1,13 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- hosts: qatutil103.unix.gsm1900.org
+- name: "deploys a simple standalone Tomcat 7 server"
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars_files:
+    - "group_vars/tomcat-servers.yml"
+    - "group_vars/server-connector.yml"
   remote_user: root
   become: yes
   become_method: sudo
