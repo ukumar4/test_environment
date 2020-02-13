@@ -1,13 +1,13 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- name: "deploys a simple standalone Tomcat 7 server"
+- name: deploys a simple standalone Tomcat 7 server
   connection: local
   gather_facts: false
   vars_files:
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
-  hosts: "{{ server-inventory.server }}"
+  hosts: "{{ server }}"
   remote_user: root
   become: yes
   become_method: sudo
