@@ -1,7 +1,7 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- hosts: qatutil103.unix.gsm1900.org
+- hosts: tomcat-server
   remote_user: root
   become: yes
   become_method: sudo
