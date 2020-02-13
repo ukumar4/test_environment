@@ -1,7 +1,7 @@
 ---
 # This playbook deploys a simple standalone Tomcat 7 server.
 
-- name: deploys a simple standalone Tomcat 7 server
+- name: a simple standalone Tomcat 7 server installation
   connection: local
   gather_facts: false
   vars_files:
