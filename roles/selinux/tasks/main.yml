@@ -1,5 +1,11 @@
 ---
+
 # Download and install EPEL for Centos/RHEL version 6
+- name: root access
+  remote_user: root
+  become: yes
+  become_method: sudo
+  
 - name: Download EPEL Repo - Centos/RHEL 6
   get_url: url=http://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm dest=/tmp/epel-release-latest-6.noarch.rpm
   when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '6'"
