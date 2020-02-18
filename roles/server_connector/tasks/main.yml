@@ -1,0 +1,8 @@
+---
+- name: "Add new Linux instance to host group"
+  add_host:
+    hostname: "{{ remote_server }}"
+    groupname: "ec2_server"
+    ansible_port: 22
+    ansible_user: "{{ user_name }}"
+    ansible_connection: "ssh" 
