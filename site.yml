@@ -1,14 +1,17 @@
 ---
-- name: Launch Server
-  hosts: localhost
-  connection: local
-  gather_facts: false
-  roles:
-    - {role: "server_connector"}
+# This playbook deploys a simple standalone Tomcat 7 server.
 
-- name: Install Packages
-  hosts: "ec2_server"
-  gather_facts: false
-  roles:
-    - selinux
-    - tomcat
+- name: a simple standalone Tomcat 7 server installation
+  connection: local
+  gather_facts: false
+  vars_files:
+    - "group_vars/tomcat-servers.yml"
+    - "group_vars/server-inventory.yml"
+  hosts: "{{ server }}"
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - selinux
+    - tomcat
