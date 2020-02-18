@@ -20,4 +20,4 @@
   when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7'"
 
 - name: Install libselinux-python
-  yum: name=libselinux-python
+  yum: name=libselinux-python use_backend=yum4
