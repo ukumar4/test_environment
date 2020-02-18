@@ -1,12 +1,12 @@
 ---
-- name: "Launch Server"
+- name: Launch Server
   hosts: localhost
   connection: local
   gather_facts: false
   roles:
     - {role: "server_connector"}
 
-- name: "Install Packages"
+- name: Install Packages
   hosts: "ec2_server"
   gather_facts: false
   roles:
