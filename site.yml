@@ -9,8 +9,6 @@
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
   remote_user: sysadmin
-  become: yes
-  become_method: sudo
   tasks:
     - name: png
       shell: hostname 
