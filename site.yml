@@ -8,9 +8,10 @@
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
-  remote_user: root
+  remote_user: sysadmin
   become: yes
   become_method: sudo
+  become_user: root
 
   roles:
     - selinux
