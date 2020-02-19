@@ -9,7 +9,7 @@
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
   tasks:
-    - debug: var: ansible_facts
+    - debug: ansible_facts
   remote_user: sysadmin
   become: yes
   become_method: sudo
