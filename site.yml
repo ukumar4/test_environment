@@ -7,7 +7,7 @@
   vars_files:
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
-  hosts: abc
+  hosts: 10.65.217.85
   remote_user: root
   become: yes
   become_method: sudo
