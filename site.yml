@@ -7,7 +7,7 @@
   vars_files:
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
-  hosts: "{{ server }}"
+  hosts: localhost
   remote_user: root
   become: yes
   become_method: sudo
