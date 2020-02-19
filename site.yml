@@ -11,6 +11,10 @@
   remote_user: root
   become: yes
   become_method: sudo
+  tasks:
+    - name: png
+      shell: hostname 
+  
 
   roles:
     - selinux
