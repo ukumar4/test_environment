@@ -16,6 +16,4 @@
       shell: hostname 
   
 
-  roles:
-    - selinux
-    - tomcat
+
