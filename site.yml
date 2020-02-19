@@ -8,10 +8,9 @@
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
-  ansible_become: false
+  become: false
   tasks:
     - debug: var=ansible_facts
   remote_user: sysadmin
-  become: yes
   become_method: sudo
   become_user: root
