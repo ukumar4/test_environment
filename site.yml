@@ -9,8 +9,7 @@
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
   tasks:
-    - debug:
-        msg: "{{ hostvars[inventory_hostname].ansible_distribution }}"
+    - debug: var=ansible_facts
     - debug:
         msg: "{{ hostvars[inventory_hostname].ansible_distribution_major_version }}"
     - debug:
