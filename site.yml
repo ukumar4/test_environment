@@ -7,7 +7,7 @@
   vars_files:
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
-  hosts: localhost
+  hosts: "{{ server }}"
   tasks:
     - debug: var=ansible_facts
     - debug:
