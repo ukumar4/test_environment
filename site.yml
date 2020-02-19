@@ -8,6 +8,7 @@
     - "group_vars/tomcat-servers.yml"
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
+  shell: /bin/bash
   remote_user: sysadmin
   become: yes
   become_method: sudo
