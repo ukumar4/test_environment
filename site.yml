@@ -9,7 +9,7 @@
     - "group_vars/server-inventory.yml"
   hosts: "{{ server }}"
   remote_user: root
-  become: false
+  become: yes
   become_method: sudo
 
   roles:
